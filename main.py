@@ -2,6 +2,7 @@
 
 
 
+
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical
 from textual.widgets import Button, Label
@@ -154,7 +155,7 @@ class TerminalMusicPlayer(App):
         if key == "q":
             self.exit()
         elif self.current_instrument is not None:
-            # Send the key press to whichever instrument is currently active
+            # It willll Send the key press to whichever instrument is currently active <3
             self.current_instrument.handle_key(key)
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
