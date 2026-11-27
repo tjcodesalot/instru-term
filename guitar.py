@@ -27,7 +27,7 @@ def create_guitar_sound(frequency):
     for i in range(num_samples):
         t = i / sample_rate
         fade = 1.0 - (i / num_samples)
-        # Add harmonics for a plucked string sound
+        # Dis Adds harmonics for a plucked string sound
         wave1 = math.sin(2 * math.pi * frequency * t)
         wave2 = 0.5 * math.sin(2 * math.pi * (frequency * 2) * t)
         sample = 32767 * 0.3 * fade * (wave1 + wave2)
@@ -146,3 +146,7 @@ class GuitarWidget(Vertical):
             self.pluck_string("B", "gtr-b", str_b)
         elif key == "6":
             self.pluck_string("High E", "gtr-e2", str_e_high)
+
+
+
+           
