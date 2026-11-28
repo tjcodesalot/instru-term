@@ -69,3 +69,18 @@ I also increased da note duration fromm 0.5s to 0.7s so the string ring out long
 Challanges and fixes:
 Problems: combining two audio waves doubled the amplitude and caused audio clipping(distortion)
 fixx: I scaled down the master volume multiplier to 0.3 before packing it into a 16 bit integer so the combined harmonic wave stays clean..
+
+
+Log.4:
+What i built today:
+Today i added drums.pum unlike piano or Guitar, drums dont play standard musical notes, i made four different sound Gen. for a Kick, snare, Hi-hat and tom, mapped to keys Z, X C, V,
+How it works:
+kick: Uses a low frequency (120hz) that rapidly drops down in pitch over 0.25 seconds to create a deep bass thump.
+Snare: Itt combines a mid qick mid-tone thud with random white noise (random.uniform(-1,1)) to simulate the rattle of snare wires.pygame
+Hi-Hat: USes pure high frequency white noise with a very sharp, fast fade out (0.15 seconds) for 
+a crisp metallic "tss" sound.
+TomDrumm: Uses a mid-low frequency(100hz) with a gradual pitch dropp for a classic tom fill sound.
+
+Fixes and problems:
+Problem: The hi-hat sounded like a snare in first try 
+Fix: I shortned the Hi-hat duration and squared the fade-out curve (fade* fade) so it cuts off sharply like closed cymbals..
